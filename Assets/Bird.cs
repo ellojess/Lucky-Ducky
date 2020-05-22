@@ -21,6 +21,7 @@ public class Bird : MonoBehaviour {
         {
 			print("flying");
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             print("rotating left");
