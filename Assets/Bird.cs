@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour {
 
+    Rigidbody rigidBody;
+
 	// Use this for initialization
 	void Start () {
-		
+        // act on compotents that are type Rigidbody
+        // get access to rigidBody in bird 
+        rigidBody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +24,7 @@ public class Bird : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space)) // can fly while rotating 
         {
 			print("flying");
+            rigidBody.AddRelativeForce(Vector3.up);
         }
 
         if (Input.GetKey(KeyCode.A))
