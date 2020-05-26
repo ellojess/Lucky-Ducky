@@ -3,30 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour {
+public class Bird : MonoBehaviour
+{
 
     Rigidbody rigidBody;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         // act on compotents that are type Rigidbody
         // get access to rigidBody in bird 
         rigidBody = GetComponent<Rigidbody>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		ProcessInput();
-	}
+    }
 
-    private void ProcessInput()
+    // Update is called once per frame
+    void Update()
+    {
+        Fly();
+        Rotate();
+    }
+
+    private void Fly()
     {
         if (Input.GetKey(KeyCode.Space)) // can fly while rotating 
         {
-			print("flying");
+            print("flying");
             rigidBody.AddRelativeForce(Vector3.up);
         }
+    }
 
+    private void Rotate()
+    {
         if (Input.GetKey(KeyCode.A))
         {
             print("rotating left");
@@ -38,4 +45,5 @@ public class Bird : MonoBehaviour {
             transform.Rotate(-Vector3.forward);
         }
     }
+
 }
