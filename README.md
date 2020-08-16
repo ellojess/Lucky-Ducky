@@ -1,5 +1,5 @@
-# Booster
-Booster is a 3D game inspired by the famous Flappy Bird. Play as a drunken and disorderly seagull trying to fly their way to their next meal (or drink)!
+# Lucky Ducky
+Lucky Ducky is a 3D game inspired by the famous Flappy Bird. Play as a drunken and disorderly seagull trying to fly their way to their next meal (or drink)!
 
 ## How to Play 
 - Press the SPACE key to keep flying 
